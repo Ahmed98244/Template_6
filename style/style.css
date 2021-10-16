@@ -1,0 +1,367 @@
+/* start global  */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+/* end global  */
+/* start my framework */
+.clearfix {
+  clear: both;
+}
+.special-heading {
+  position: relative;
+}
+.special-heading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 40px;
+  border-bottom: 2px solid #333;
+}
+.separator {
+  border: 1px solid #eee;
+}
+.global-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/* end my framework */
+/* start navbar  */
+.navbar {
+  font-size: 18px;
+  height: 0;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.navbar .brand {
+  float: left;
+  width: 50%;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.navbar .links {
+  float: left;
+  width: 50%;
+  margin-top: 25px;
+  font-weight: 200;
+}
+.navbar .links li {
+  display: inline-block;
+  padding: 10px 0;
+  margin: 0 10px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.navbar .links li a {
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+.navbar .links li.active a,
+.navbar .links li a:hover {
+  color: #1abc9c;
+}
+.navbar .links li.active,
+.navbar .links li:hover {
+  border-bottom: 2px solid #1abc9c;
+}
+/* end navbar  */
+/* start header  */
+header {
+  background: url("../images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+header .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  z-index: 1;
+}
+/* slider  */
+header .bx-wrapper {
+  height: 100%;
+  background: none;
+  border: 0;
+}
+header .bx-wrapper .bx-viewport {
+  box-shadow: none;
+  background: none;
+  height: 100% !important;
+  text-align: center;
+}
+header .slider {
+  height: 100%;
+}
+header .slider div {
+  height: 150px;
+}
+header .slider div h2 {
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+header .slider div span {
+  color: #1abc9c;
+}
+/* end header  */
+/* start services  */
+.services {
+  padding: 70px 20px 40px;
+}
+.services h2 {
+  margin: 0 0 50px;
+}
+.services .item {
+  float: left;
+  width: calc(100% / 3);
+  margin-bottom: 20px;
+}
+.services .item i {
+  color: #1abc9c;
+  float: left;
+  width: 17%;
+  margin-right: 8%;
+  margin-top: 15px;
+}
+.services .item .info {
+  float: left;
+  width: 70%;
+}
+.services .item .info h3 {
+  margin-bottom: 10px;
+}
+.services .item .info p {
+  margin-top: 0;
+  color: #888;
+}
+/* end services  */
+/* start our team  */
+.our-team {
+  padding: 40px 20px;
+}
+.our-team .box {
+  float: left;
+}
+.our-team .box:first-child {
+  width: 35%;
+}
+.our-team .box:not(:first-child) {
+  width: calc(61% / 4);
+  margin-left: 1%;
+  position: relative;
+}
+.our-team .box:not(:first-child) .overlay {
+  line-height: 183px;
+  text-align: center;
+  background-color: rgba(26, 188, 156, 0.8);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: none;
+}
+.our-team .box:not(:first-child):hover .overlay {
+  display: block;
+}
+.our-team .box:not(:first-child) img {
+  width: 100%;
+}
+.our-team .box h2 {
+  margin-bottom: 30px;
+}
+.our-team .box p {
+  color: #888;
+  line-height: 1.5;
+}
+.our-team .box img {
+  width: 170px;
+  height: 170px;
+  border-radius: 4px;
+}
+/* end our team  */
+/* start testimonials  */
+.testimonials {
+  background: url("../images/Client.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  padding: 80px 0;
+}
+.testimonials .t-overlay {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.testimonials h2 {
+  font-size: 40px;
+  margin: 80px 0 10px;
+}
+.testimonials q {
+  font-size: 20px;
+  line-height: 2;
+  color: #d0d0d0;
+  display: block;
+  margin-top: 60px;
+}
+.testimonials p {
+  font-size: 30px;
+  color: #1abc9c;
+}
+/* end testimonials  */
+/* start projects  */
+.projects {
+  padding: 60px 0;
+}
+.projects ul {
+  margin-top: 50px;
+}
+.projects ul li {
+  display: inline-block;
+  border: 2px solid #d4cccc;
+  border-radius: 5px;
+  color: #a7a7a7;
+  padding: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.projects ul li.active,
+.projects ul li:hover {
+  background-color: #1abc9c;
+  border: 2px solid #1abc9c;
+  color: #fff;
+}
+.projects .gallery {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.projects .gallery .row > div:nth-child(2) {
+  margin: 0 1%;
+}
+.projects .gallery .row > div {
+  width: calc(98% / 3);
+  float: left;
+  margin-bottom: 12px;
+  position: relative;
+}
+.projects .gallery .row > div img {
+  width: 100%;
+  height: 100%;
+}
+.projects .gallery .row > div .overlay {
+  line-height: 232px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(26, 188, 156, 0.8);
+  display: none;
+}
+.projects .gallery .row > div .heart {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #fff;
+  display: none;
+}
+.projects .gallery .row > div:hover .overlay,
+.projects .gallery .row > div:hover .heart {
+  display: block;
+}
+/* end projects  */
+/* start footer  */
+.footer {
+  background-color: #232323;
+  color: #6c6c6c;
+  padding: 30px 0;
+  overflow: hidden;
+}
+.footer .col {
+  width: 25%;
+  float: left;
+}
+.footer .col h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.footer .col p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.footer .col i {
+  display: inline-block;
+  width: 40px;
+  padding: 10px;
+  border: 1px solid #979797;
+  color: #979797;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.footer .col i:hover {
+  color: #fff;
+}
+.footer .tags span {
+  display: inline-block;
+  border: 1px solid #979797;
+  color: #ccc;
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.footer .posts div {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.footer .posts div img {
+  float: left;
+  margin-right: 10px;
+  width: 180px;
+  height: 130px;
+  transition: all 0.3s ease-out;
+}
+.footer .posts div img:hover {
+  transform: scale(1, 1.4);
+}
+.footer .posts div h4 {
+  margin: 10px 0;
+  color: #ccc;
+}
+.footer .blog ul li {
+  padding: 15px;
+  border-bottom: 1px solid #979797;
+  color: #ccc;
+}
+.footer .copyright {
+  margin-top: 30px;
+}
+/* end footer  */
